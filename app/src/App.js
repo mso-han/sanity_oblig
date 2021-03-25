@@ -6,7 +6,7 @@ function App() {
   return (
     <>
     <Movies/>
-    <h1>Hallo xd</h1>
+    <h1>Trykk På Knappen!</h1>
     </>
   );
 }

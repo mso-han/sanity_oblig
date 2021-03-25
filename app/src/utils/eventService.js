@@ -2,7 +2,7 @@ import client from './client';
 
 const movieListFields = `
     title,
-    'actor': actor->title,
+    'actor': actor->name,
 `;
 
 export const getEvents = async() => {
