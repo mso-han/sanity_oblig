@@ -4,16 +4,16 @@ import Movie from './Movie'
 
 const Movies = () => {
     const [data, setData] = useState([]); 
+
     const handleClick = async() =>{
       const events = await getEvents();
       setData(events);
     };
-    const props = JSON.stringify(data).replace(/[[\]{}"]+/g, '').replace('title:', '').replace('actor:','').split(",");
     
     
     return (
         <>
-        <Movie title={props[1]} actor={props[0]}/>
+        {data?.length > 0 ? data.map(movie=> <Movie title={movie.title} actor={movie.actor} />) : null}
         
           <button type="button" onClick={handleClick}>
             Get Content
